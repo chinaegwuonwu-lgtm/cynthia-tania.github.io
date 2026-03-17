@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masterclass Enrollment | Cynthia Tania Designs</title>
+    <style>
+        :root { 
+            --accent: #E58D7F; 
+            --bg-dark: #0A1128; 
+            --card-bg: #16223F; 
+            --text-light: #F8F1F1; 
+        }
+        
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--bg-dark); color: var(--text-light); margin: 0; padding: 0; line-height: 1.5; font-size: 14px; }
+        .container { max-width: 500px; margin: auto; padding: 15px; }
+        
+        .header { text-align: center; padding: 40px 15px; background: linear-gradient(180deg, var(--card-bg) 0%, var(--bg-dark) 100%); border-bottom: 2px solid var(--accent); }
+        h1 { color: var(--accent); margin: 5px 0; font-size: 1.4rem; text-transform: uppercase; letter-spacing: 1px; }
+        .sub-brand { font-weight: bold; color: #8e9aaf; letter-spacing: 2px; font-size: 0.7rem; }
+
+        .instruction-box { background: rgba(229, 141, 127, 0.1); border: 1px solid var(--accent); padding: 15px; border-radius: 10px; margin: 20px 0; text-align: center; font-size: 0.85rem; }
+
+        .outline-card { background: var(--card-bg); border-radius: 10px; padding: 12px; margin-bottom: 10px; border-left: 4px solid var(--accent); }
+        .outline-card h3 { margin: 0; color: var(--accent); font-size: 0.95rem; text-transform: uppercase; }
+        .outline-card p { margin: 5px 0 0 0; font-size: 0.85rem; color: #cbd5e1; }
+
+        .bonus-section { background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 10px; border: 1px dashed var(--accent); margin: 15px 0; }
+        .bonus-item { color: var(--accent); font-weight: bold; display: block; margin-bottom: 3px; font-size: 0.85rem; }
+
+        .pricing-section { background: var(--card-bg); padding: 20px; border-radius: 15px; border: 1px solid #2d3a5a; margin-top: 15px; }
+
+        .bank-card { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; margin: 15px 0; border: 1px solid #2d3a5a; text-align: center; }
+        .copy-btn { background: var(--accent); border: none; color: var(--bg-dark); padding: 6px 12px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 0.75rem; margin-top: 10px; }
+
+        .verify-btn { display: block; background: #25d366; color: white; text-align: center; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: bold; margin-top: 20px; font-size: 1rem; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+
+        footer { text-align: center; padding: 30px 0; color: #5c6b89; font-size: 0.7rem; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="sub-brand">CYNTHIA TANIA'S DESIGNS ACADEMY</div>
+    <h1>30-Day PixelLab Masterclass</h1>
+</div>
+
+<div class="container">
+    
+    <div class="instruction-box">
+        <strong>ACCESS PROTOCOL:</strong> <br>
+        1. Transfer payment to the Sterling Bank account below. <br>
+        2. Click the button to send your receipt to the Admin DM. <br>
+        3. Once verified, you will receive the private group link.
+    </div>
+
+    <div class="outline-card">
+        <h3>✨ Professional BG Removal</h3>
+        <p>Master clean, high-end cutouts. Leave no word or sentence untouched in this deep-dive module.</p>
+    </div>
+
+    <div class="outline-card">
+        <h3>📱 Social Media & Packaging</h3>
+        <p>Create professional flyers, 3D product mockups, and stunning social media packaging designs.</p>
+    </div>
+
+    <div class="outline-card">
+        <h3>📐 Design Theory & Composition</h3>
+        <p>Learn the Do's and Don'ts of design, color psychology, and professional layout rules.</p>
+    </div>
+
+    <div class="outline-card">
+        <h3>💰 Skill Monetization</h3>
+        <p>Learn exactly how to brand yourself, find clients, and earn from your smartphone graphics skill.</p>
+    </div>
+
+    <div class="bonus-section">
+        <span class="bonus-item">🎓 Official Certificate of Completion</span>
+        <span class="bonus-item">📂 Exclusive Pixellab YD Version</span>
+        <span class="bonus-item">📦 Premium Design Resource Pack</span>
+    </div>
+
+    <div class="pricing-section">
+        <div class="bank-card">
+            <p style="margin: 0; font-size: 0.65rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">STERLING BANK</p>
+            <p id="accNumber" style="font-family: monospace; font-size: 1.5rem; letter-spacing: 3px; margin: 5px 0; font-weight: 800; color: var(--accent);">0140546704</p>
+            <p style="margin: 0; font-size: 0.9rem; font-weight: bold;">Chinalurum Marycynthia Egwuonwu</p>
+            <button class="copy-btn" onclick="copyAccount()">COPY ACCOUNT NUMBER</button>
+        </div>
+
+        <a href="https://wa.me/2349162800566?text=Hello%20Cynthia,%20I%20have%20made%20the%20payment%20for%20the%2030-Day%20PixelLab%20Masterclass.%20Here%20is%20my%20receipt%20for%20verification." class="verify-btn">
+            CLICK HERE TO SEND RECEIPT ✅
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2026 Cynthia Tania Designs | Empire Tech <br>
+        Meticulous Learning: Chapter 1 to 5.
+    </footer>
+</div>
+
+<script>
+    function copyAccount() {
+        const num = document.getElementById("accNumber").innerText;
+        navigator.clipboard.writeText(num);
+        alert("Account Number Copied! Send your 5k to Sterling Bank.");
+    }
+</script>
+
+</body>
+</html>
